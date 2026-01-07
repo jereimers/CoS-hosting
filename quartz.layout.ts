@@ -23,7 +23,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
+    // Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
@@ -38,7 +38,12 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      filterFn: (node) => {
+        // Show only the Player Wiki folder and its children
+        return node.displayName?.startsWith("Player Wiki/")
+      },
+    }),
   ],
   right: [
     Component.Graph(),
