@@ -1,0 +1,4 @@
+[submodule "vault"]
+	path = vault
+	url = https://github.com/jereimers/CoS-authoring.git
+	branch = blors
