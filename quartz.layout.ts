@@ -37,13 +37,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
-    }),
-    Component.Explorer({
-      filterFn: (node) => {
-        // Show only the Player Wiki folder and its children
-        return node.slug.startsWith("Player Wiki/")
-      },
-    }),
+    })
   ],
   right: [
     Component.Graph(),
