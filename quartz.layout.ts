@@ -41,7 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       filterFn: (node) => {
         // Show only the Player Wiki folder and its children
-        return node.displayName?.startsWith("Player Wiki/")
+        return node.slug.startsWith("Player Wiki/")
       },
     }),
   ],
