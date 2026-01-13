@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Blor's Obsidian Tomb",
+    pageTitle: "Wiki of Strahd",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -73,7 +73,7 @@ const config: QuartzConfig = {
     ],
     filters: [
       Plugin.RemoveDrafts(),
-      // Plugin.ExplicitPublish(),
+      Plugin.ExplicitPublish(),
     ],
     emitters: [
       Plugin.AliasRedirects(),
